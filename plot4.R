@@ -25,12 +25,12 @@ x<-1:n
 days<-as.Date(data$Date,format="%d/%m/%Y",tz = "UTC")
 days<-wday(days,label=TRUE)
 summary(days)
-par(mfrow=c(2,2))
+
 
 # Save plots
 png(filename = "plot4.png",width = 480, height = 480, units = "px", pointsize =
         12,bg = "white")
-
+par(mfrow=c(2,2))
 plot(x,gap,type="l",axes = FALSE,xlab="",ylab="Global Active Power (kilowatts)")
 axis(side=1, at=c("1","1440","2880"), labels=c("Thu","Fri","Sat"))
 axis(2)
